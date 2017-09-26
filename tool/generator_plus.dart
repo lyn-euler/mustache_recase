@@ -5,6 +5,8 @@ import 'package:generator_plus/generator_plus.dart';
 import 'package:mustache_recase/generator+/generators.dart';
 import 'package:mustache_recase/generator+/annotations.dart';
 
+//@generationBefore("new-generator-import")
+
 class MustacheRecaseGenerator extends GeneratorPlus {
   MustacheRecaseGenerator() {
     @generationAssignment("new-generator", append: true)

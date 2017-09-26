@@ -13,3 +13,5 @@ dependencies:
 
 dev_dependencies:
   test: ^0.12.0
+  generator_plus:
+    path: /home/nico/src/generator-plus
