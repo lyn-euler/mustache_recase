@@ -14,17 +14,18 @@ class CaseGenerator extends Generator {
       variablesResolver["camelCase"] = reCase.camelCase;
       variablesResolver["title"] = reCase.titleCase;
       variablesResolver["escapeHack"] =
-          '{{ # $snakeCaseName }}{{test_var}} {{ \/ $snakeCaseName }}';
+          '{{ # $snakeCaseName }}{{test_var}} {{ / $snakeCaseName }}';
     });
     String assignmentString =
         '"{{snake_case}}": (LambdaContext ctx) => new ReCase(ctx.renderString()).{{camelCase}}';
-    String sourceTemplate = 'testSource += "{{escapeHack}}";';
+    String sourceTemplate =
+        'testSource += "{{{escapeHack}}}";'; //use {{{}}} to don't html scape the /
     String testTemplate = '''test("{{title}}", () {
       expect(compiled, contains(reCase.{{camelCase}}));
     });
     ''';
     String exampleTemplate =
-        'templateSource += "{{title}}: {{escapeHack}} \\n";';
+        'templateSource += "{{title}}: {{{escapeHack}}} \\n";'; //use {{{}}} to don't html scape the /
     processFile("example/cli_interactive_example.dart",
         templates: {"new-case_example_template": exampleTemplate});
     processFile("test/mustache_recase_test.dart", templates: {
