@@ -5,6 +5,7 @@ import 'package:generator_plus/generator_plus.dart';
 import 'package:mustache_recase/generator+/generators.dart';
 import 'package:mustache_recase/generator+/annotations.dart';
 
+import "./generator+/generators/case.dart";
 //@generationBefore("new-generator-import")
 
 class MustacheRecaseGenerator extends GeneratorPlus {
@@ -13,6 +14,7 @@ class MustacheRecaseGenerator extends GeneratorPlus {
     List<Generator> generators = [
       new AnnotationsGenerator(),
       new GeneratorsGenerator(),
+      new CaseGenerator()
     ];
     addGenerators(generators);
   }
