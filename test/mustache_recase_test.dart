@@ -11,7 +11,8 @@ void main() {
     String compiled;
     String testSource = '';
     //@generationAfter("new-case_source_template")
-    testSource += "{{ # camel_case }} {{test_var}} {{ / camel_case }}";
+    testSource += "{{ # snake_case }}{{test_var}} {{ / snake_case }}";
+    testSource += "{{ # camel_case }}{{test_var}} {{ / camel_case }}";
     String test_var = "un_test-var_MUY_muyMuyLARGO";
     Template template = new Template(testSource);
     ReCase reCase = new ReCase(test_var);
@@ -22,8 +23,12 @@ void main() {
       compiled = template.renderString(vars);
     });
 
-    @generationAfter("new-case_test")
-    test("camelCase", () {
+    // @generationAfter("new-case_test")
+    test("Snake Case", () {
+      expect(compiled, contains(reCase.snakeCase));
+    });
+
+    test("Camel Case", () {
       expect(compiled, contains(reCase.camelCase));
     });
   });

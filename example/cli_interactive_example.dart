@@ -10,6 +10,8 @@ main(List<String> args) {
   String templateSource = '';
   //@generationAfter("new-case_example_template")
   templateSource +=
+      "Snake Case: {{ # snake_case }}{{test_var}} {{ / snake_case }}\n";
+  templateSource +=
       "Camel Case: {{ # camel_case }}{{test_var}} {{ / camel_case }}\n";
 
   Template template = new Template(templateSource);
