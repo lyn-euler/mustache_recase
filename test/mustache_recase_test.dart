@@ -11,6 +11,8 @@ void main() {
     String compiled;
     String testSource = '';
     //@generationAfter("new-case_source_template")
+testSource += "{{ # param_case }}{{test_var}} {{ / param_case }}";
+testSource += "{{ # pascal_case }}{{test_var}} {{ / pascal_case }}";
     testSource += "{{ # snake_case }}{{test_var}} {{ / snake_case }}";
     testSource += "{{ # camel_case }}{{test_var}} {{ / camel_case }}";
     String test_var = "un_test-var_MUY_muyMuyLARGO";
@@ -24,6 +26,14 @@ void main() {
     });
 
     // @generationAfter("new-case_test")
+test("Param Case", () {
+      expect(compiled, contains(reCase.paramCase));
+    });
+    
+test("Pascal Case", () {
+      expect(compiled, contains(reCase.pascalCase));
+    });
+    
     test("Snake Case", () {
       expect(compiled, contains(reCase.snakeCase));
     });

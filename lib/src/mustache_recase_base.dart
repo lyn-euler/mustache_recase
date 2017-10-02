@@ -18,4 +18,4 @@ import "../generator+/annotations.dart";
 
 /// The bunch of case conversions functions
 @generationAssignment("new-case")
-Map<String, Function> cases = {"camel_case" : (LambdaContext ctx) => new ReCase(ctx.renderString()).camelCase, "snake_case": (LambdaContext ctx) => new ReCase(ctx.renderString()).snakeCase};
+Map<String, Function> cases = {"camel_case" : (LambdaContext ctx) => new ReCase(ctx.renderString()).camelCase, "snake_case" : (LambdaContext ctx) => new ReCase(ctx.renderString()).snakeCase, "pascal_case" : (LambdaContext ctx) => new ReCase(ctx.renderString()).pascalCase, "param_case": (LambdaContext ctx) => new ReCase(ctx.renderString()).paramCase};
