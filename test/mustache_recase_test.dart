@@ -8,9 +8,9 @@ import 'package:test/test.dart';
 
 void main() {
   group('Recasing', () {
-    String compilado;
+    String compiled;
     String testSource = '';
-    //@generationAfter("source_template")
+    //@generationAfter("new-case_source_template")
     testSource += "{{ # camel_case }} {{test_var}} {{ / camel_case }}";
     String test_var = "un_test-var_MUY_muyMuyLARGO";
     Template template = new Template(testSource);
@@ -19,11 +19,12 @@ void main() {
     setUp(() {
       Map vars = {"test_var": test_var};
       vars.addAll(cases);
-      compilado = template.renderString(vars);
+      compiled = template.renderString(vars);
     });
 
+    @generationAfter("new-case_test")
     test("camelCase", () {
-      expect(compilado, contains(reCase.camelCase));
+      expect(compiled, contains(reCase.camelCase));
     });
   });
 }
