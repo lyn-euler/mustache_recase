@@ -11,6 +11,12 @@ void main() {
     String compiled;
     String testSource = '';
     //@generationAfter("new-case_source_template")
+testSource += "{{ # dot_case }}{{test_var}} {{ / dot_case }}";
+testSource += "{{ # path_case }}{{test_var}} {{ / path_case }}";
+testSource += "{{ # constant_case }}{{test_var}} {{ / constant_case }}";
+testSource += "{{ # header_case }}{{test_var}} {{ / header_case }}";
+testSource += "{{ # sentence_case }}{{test_var}} {{ / sentence_case }}";
+testSource += "{{ # title_case }}{{test_var}} {{ / title_case }}";
 testSource += "{{ # param_case }}{{test_var}} {{ / param_case }}";
 testSource += "{{ # pascal_case }}{{test_var}} {{ / pascal_case }}";
     testSource += "{{ # snake_case }}{{test_var}} {{ / snake_case }}";
@@ -26,6 +32,30 @@ testSource += "{{ # pascal_case }}{{test_var}} {{ / pascal_case }}";
     });
 
     // @generationAfter("new-case_test")
+test("Dot Case", () {
+      expect(compiled, contains(reCase.dotCase));
+    });
+    
+test("Path Case", () {
+      expect(compiled, contains(reCase.pathCase));
+    });
+    
+test("Constant Case", () {
+      expect(compiled, contains(reCase.constantCase));
+    });
+    
+test("Header Case", () {
+      expect(compiled, contains(reCase.headerCase));
+    });
+    
+test("Sentence Case", () {
+      expect(compiled, contains(reCase.sentenceCase));
+    });
+    
+test("Title Case", () {
+      expect(compiled, contains(reCase.titleCase));
+    });
+    
 test("Param Case", () {
       expect(compiled, contains(reCase.paramCase));
     });

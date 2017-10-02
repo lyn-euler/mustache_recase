@@ -9,6 +9,12 @@ main(List<String> args) {
 
   String templateSource = '';
   //@generationAfter("new-case_example_template")
+templateSource += "Dot Case: {{ # dot_case }}{{test_var}} {{ / dot_case }} \n";
+templateSource += "Path Case: {{ # path_case }}{{test_var}} {{ / path_case }} \n";
+templateSource += "Constant Case: {{ # constant_case }}{{test_var}} {{ / constant_case }} \n";
+templateSource += "Header Case: {{ # header_case }}{{test_var}} {{ / header_case }} \n";
+templateSource += "Sentence Case: {{ # sentence_case }}{{test_var}} {{ / sentence_case }} \n";
+templateSource += "Title Case: {{ # title_case }}{{test_var}} {{ / title_case }} \n";
 templateSource += "Param Case: {{ # param_case }}{{test_var}} {{ / param_case }} \n";
   templateSource +=
       "Pascal Case: {{ # pascal_case }}{{test_var}} {{ / pascal_case }} \n";
