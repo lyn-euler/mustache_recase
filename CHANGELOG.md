@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.3
+
+- Mocosoft free
+- Dart 2 compatibility with <3.0.0 constraint
+- verbose description with >60 chars
+- Example file renamed to example.dart
+
 ## 1.0.2
 
 - Generator+ public scaffolded structure reintroduced
