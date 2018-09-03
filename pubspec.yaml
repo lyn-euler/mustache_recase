@@ -1,6 +1,6 @@
 name: mustache_recase
 description: A mustache package extension for handling case conversions through e.g. {{#constant_case}} {{varName}} recased {{#constant_case}} 
-version: 1.0.3
+version: 2.0.0
 homepage: https://gitlab.com/Rodsevich/mustache_recase/
 author: Rodsevich <nicorodsevich@gmail.com>
 
@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   mustache: '>=1.0.0 <2.0.0'
-  recase: ^1.0.0
+  recase: ^2.0.0
   generator_plus: ^0.0.0
 
 dev_dependencies:

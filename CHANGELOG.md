@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0
+
+- recase dep. updated to 2.0.0
+
 ## 1.0.3
 
 - Mocosoft free
