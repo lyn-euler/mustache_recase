@@ -3,7 +3,7 @@
 
 import "package:mustache/mustache.dart";
 import "package:recase/recase.dart";
-import "../generator+/annotations.dart";
+//import "../generator+/annotations.dart";
 
 // snake_case
 // dot.case
@@ -17,7 +17,7 @@ import "../generator+/annotations.dart";
 // CONSTANT_CASE
 
 /// The bunch of case conversions functions
-@generationAssignment("new-case")
+//@generationAssignment("new-case")
 Map<String, Function> cases = {
   "camel_case": (LambdaContext ctx) => new ReCase(ctx.renderString()).camelCase,
   "snake_case": (LambdaContext ctx) => new ReCase(ctx.renderString()).snakeCase,

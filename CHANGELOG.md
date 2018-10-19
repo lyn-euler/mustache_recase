@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+
+- Removed Generator+ dep
+
 ## 2.0.0
 
 - recase dep. updated to 2.0.0
