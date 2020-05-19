@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.2
+
+- Updated package
+- Removed 'new' keyword
+
 ## 2.0.1
 
 - Removed Generator+ dep

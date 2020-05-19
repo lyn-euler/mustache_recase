@@ -19,18 +19,16 @@ import "package:recase/recase.dart";
 /// The bunch of case conversions functions
 //@generationAssignment("new-case")
 Map<String, Function> cases = {
-  "camel_case": (LambdaContext ctx) => new ReCase(ctx.renderString()).camelCase,
-  "snake_case": (LambdaContext ctx) => new ReCase(ctx.renderString()).snakeCase,
-  "pascal_case": (LambdaContext ctx) =>
-      new ReCase(ctx.renderString()).pascalCase,
-  "param_case": (LambdaContext ctx) => new ReCase(ctx.renderString()).paramCase,
-  "title_case": (LambdaContext ctx) => new ReCase(ctx.renderString()).titleCase,
+  "camel_case": (LambdaContext ctx) => ReCase(ctx.renderString()).camelCase,
+  "snake_case": (LambdaContext ctx) => ReCase(ctx.renderString()).snakeCase,
+  "pascal_case": (LambdaContext ctx) => ReCase(ctx.renderString()).pascalCase,
+  "param_case": (LambdaContext ctx) => ReCase(ctx.renderString()).paramCase,
+  "title_case": (LambdaContext ctx) => ReCase(ctx.renderString()).titleCase,
   "sentence_case": (LambdaContext ctx) =>
-      new ReCase(ctx.renderString()).sentenceCase,
-  "header_case": (LambdaContext ctx) =>
-      new ReCase(ctx.renderString()).headerCase,
+      ReCase(ctx.renderString()).sentenceCase,
+  "header_case": (LambdaContext ctx) => ReCase(ctx.renderString()).headerCase,
   "constant_case": (LambdaContext ctx) =>
-      new ReCase(ctx.renderString()).constantCase,
-  "path_case": (LambdaContext ctx) => new ReCase(ctx.renderString()).pathCase,
-  "dot_case": (LambdaContext ctx) => new ReCase(ctx.renderString()).dotCase
+      ReCase(ctx.renderString()).constantCase,
+  "path_case": (LambdaContext ctx) => ReCase(ctx.renderString()).pathCase,
+  "dot_case": (LambdaContext ctx) => ReCase(ctx.renderString()).dotCase
 };
