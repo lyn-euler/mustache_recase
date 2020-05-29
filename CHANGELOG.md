@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.2
+## 2.0.3
 
 - Changed to mustache_template that doesn't depends on mirrors for greater compatibility
 

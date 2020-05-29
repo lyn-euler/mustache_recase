@@ -2,7 +2,6 @@ name: mustache_recase
 description: A mustache package extension for handling case conversions through e.g. {{#constant_case}} {{varName}} recased {{#constant_case}}
 version: 2.0.3
 homepage: https://gitlab.com/Rodsevich/mustache_recase/
-author: Rodsevich <nicorodsevich@gmail.com>
 
 environment:
   sdk: ">=2.0.0 <3.0.0"
