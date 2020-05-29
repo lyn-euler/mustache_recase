@@ -2,6 +2,10 @@
 
 ## 2.0.2
 
+- Changed to mustache_template that doesn't depends on mirrors for greater compatibility
+
+## 2.0.2
+
 - Updated package
 - Removed 'new' keyword
 
