@@ -4,11 +4,11 @@ version: 2.0.3
 homepage: https://gitlab.com/Rodsevich/mustache_recase/
 
 environment:
-  sdk: ">=2.0.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
-  mustache_template: ^1.0.0
-  recase: ^3.0.0
+  mustache_template: ^2.0.0
+  recase: ^4.0.0
 
 dev_dependencies:
-  test: ">=0.12.0 <1.4.0"
+  test: ^1.17.4
