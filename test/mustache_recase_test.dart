@@ -8,7 +8,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('Recasing', () {
-    String compiled;
+    late String compiled;
     String testSource = '';
     //@generationAfter("new-case_source_template")
     testSource += "{{ # dot_case }}{{test_var}} {{ / dot_case }}";
